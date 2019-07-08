@@ -45,7 +45,7 @@ jobs:
           name: Setup Org
           command: |
             echo 'Running tests'
-            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDC_USER --setdefaultdevhubusername -a hub
+            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDC_USER sfdx force:auth:jwt:grant --clientid 3MVG9YDQS5WtC11r7swMLzghyrrfNss4_zgjvCRRoWE45c4AJSW0msa3SLIbRvVYCnlnq8TTPOc1_IDB60Nht  --jwtkeyfile server.key --username anant.kunal@concret.io --instanceurl https://login.salesforce.com  --setdefaultdevhubusername -a hub
             sfdx force --help
             sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 2
             sfdx force:source:push -u circle_build_$CIRCLE_BUILD_NUM

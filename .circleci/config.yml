@@ -61,7 +61,7 @@ jobs:
           command: |
             sfdx force:org:delete -u circle_build_$CIRCLE_BUILD_NUM -p
 
-### Uncomment the following if performing deployments
+### Uncomment the following if performing deployments dfhjk
 #deployment:
 #  override:
 #    - sfdx force:source:convert -r force-app -d testDeploy

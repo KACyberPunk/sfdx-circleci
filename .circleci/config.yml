@@ -4,7 +4,7 @@ general:
 # Uncomment the following to specify only a specific branch  fg
    branches:
      only:
-       - dev master
+       - master
        - /dev-.*/ # or regexes
 
 jobs:

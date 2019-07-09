@@ -2,13 +2,18 @@ version: 2
 
 general:
 # Uncomment the following to specify only a specific branch  
-   branches:
-     only:
-       - master
-       - /dev-.*/ # or regexes
+#   branches:
+#     only:
+#       - master
+#       - /rc-.*/
+
 
 jobs:
   build:
+    branches:
+      only:
+        - master
+        - /rc-.*/
     machine: true
     working_directory: ~/ci_app
     environment:
